@@ -10,7 +10,7 @@ import { useFormik } from 'formik';
 
 export default function App() {
   const [showThankYou , setShowThankYou] = useState(false)
-  const validate= values =>{
+  const validate = (values) =>{
     const errors = {};
     if(!values.email){
       errors.email = "Email Required"
@@ -21,12 +21,14 @@ export default function App() {
     return errors;
   }
   const onSubmit = (values,{ resetForm }) => {
-    resetForm();
     setShowThankYou(true);
+    console.log(values);
   };
   const handleDismiss = () => {
     setShowThankYou(false);
+    resetForm();
   };
+
   const formik= useFormik({
     initialValues:{
       email:"",
@@ -80,7 +82,7 @@ export default function App() {
             </form>
         </div>
       </div>
-      ) : (<SucessMobile  onDismiss={handleDismiss}/>)}
+      ) : (<SucessMobile  onDismiss={handleDismiss} form={formik.values}/>)}
     </div>
   )
 }
