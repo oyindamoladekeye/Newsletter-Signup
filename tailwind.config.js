@@ -10,6 +10,7 @@ export default {
         "dark-slate-grey" : "#242742",
         "charcoal-grey" : "hsl(235, 18%, 26%)",
         "grey" : "hsl(231, 7%, 60%)",
+        "tomato": "hsl(4, 100%, 67%)"
       }
     },
   },
