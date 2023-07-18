@@ -10,7 +10,7 @@ export default function SucessMobile({form, onDismiss}) {
           <h1 className='font-semibold text-5xl py-8 md:py-4'>Thanks for subscribing!</h1>
           <p>A confirmation email has been sent to <span className='font-bold'>{form.email}</span>.
           Please open it and click the button inside to confirm your subscription.</p>
-          <button className='bg-dark-slate-grey text-white mt-64 py-6 px-4 w-full rounded-xl font-semibold md:mt-8 md:w-5/6 md:self-center hover:bg-tomato' type='submit' onClick={onDismiss}>Dismiss message</button>
+          <button className='bg-dark-slate-grey text-white mt-48 py-6 px-4 w-full rounded-xl font-semibold md:mt-8 md:w-5/6 md:self-center hover:bg-tomato' type='submit' onClick={onDismiss}>Dismiss message</button>
       </div>
     </div>
   )
